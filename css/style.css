@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary: #16a083;
+    --hover: #119764;
+    --white: #fff;
+    --dark: #222;
+    --bg-light: #f3f3f3;
+    --unchecked: #aaa;
+    --danger: #cc1717;
+    --font: "Roboto", sans-serif;
+    --img-hover: rgba(0, 0, 0, 0.6);
+    --gradient: linear-gradient(rgba(240, 240, 240, 0.14), rgba(255, 255, 255, 0.336)), url('https://i.postimg.cc/wT3TQS3V/header-image2.jpg');
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font);
+    transition: all 0.4s ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-light);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover);
+}
+
+.btn-large {
+    width: 200px;
+}
+
+/* Navbar */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: var(--white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    height: 60px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.logo img {
+    max-height: 50px;
+    padding-left: 10px;
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-items li a {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+}
+
+.menu-items li a:hover {
+    color: var(--hover);
+}
+
+.navbar-toggler {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Showcase Section */
+.showcase {
+    padding: 100px 0 60px;
+    background-color: var(--bg-light);
+}
+
+.showcase-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.left-text h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.left-text h1 span {
+    color: var(--primary);
+}
+
+.left-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.right-image {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.right-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Showcase */
+@media screen and (max-width: 768px) {
+    .showcase-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .left-text h1 {
+        font-size: 2rem;
+    }
+
+    .left-text p {
+        font-size: 1rem;
+    }
+
+    .right-image img {
+        max-width: 100%;
+    }
+}
+
+/* Keep the rest of your original CSS below (Courses, About, Footer, etc.) */
+
+/* Section Title */
+.container .title {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.container .title h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    letter-spacing: 1px;
+}
+
+/* About Section */
+#about {
+    padding: 60px 10%;
+    background-color: #fff;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 320px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 320px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Section Title */
+#courses .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#courses .title h2 {
+    font-size: 32px;
+    color: #1a1a1a;
+    font-weight: 800;
+}
+
+/* Courses Container */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 10px;
+}
+
+/* Individual Course Card */
+.course-card {
+    flex: 1 1 calc(33.333% - 30px);
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Image Styling */
+.img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Course Content */
+.img-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.img-content h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.btn.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+    background: #0056b3;
+}
+
+.section-wrapper {
+    padding: 60px 10%;
+    background-color: #f5faff;
+}
+
+.cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.info-card {
+    flex: 1 1 calc(33.33% - 30px);
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-text {
+    padding: 20px;
+}
+
+.info-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.info-text p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+}
+
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+}
+
+.tbox {
+    flex: 0 0 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s;
+}
+
+.tbox:hover {
+    transform: scale(1.03);
+}
+
+.customer-photo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.customer-name {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.rating .fa {
+    color: #f8b400;
+    margin-right: 2px;
+}
+
+.test-desc {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer .links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer .links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer .links a:hover {
+    color: yellow;
+}
+
+.footer .social a {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Responsive Utility */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        display: block;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        background-color: var(--white);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu-items.active {
+        display: flex;
+    }
+
+    .service-grid,
+    .testimonial-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .btn-large {
+        width: 60%;
+    }
+}
